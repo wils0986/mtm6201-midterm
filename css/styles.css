@@ -163,6 +163,7 @@ li a:focus{
     text-decoration: underline;
 }
 
+
 /* parameters for navigation animation */
 @keyframes letsGrow{
     0%{

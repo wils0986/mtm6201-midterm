@@ -52,7 +52,6 @@ ul {
 .container {
     max-width: 96%;
     margin: 0 auto;
-    background-color:rgba(143, 102, 136, 0.10);
     border-bottom: 1px solid grey;
     margin-top: 40px;
 }
@@ -85,13 +84,23 @@ p, td, tr {
 input {
     display: flex;
     width: 200px;
-    border: 1px solid grey;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: .5px grey solid;
     height: 30px;
 }
 
 /* styles the labels in form */
 label {
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+/* styles the form to the left side */
+form{
+    margin: 100px;
+    margin-bottom: 0px;
+    text-align: start;
 }
 
 #signup {
@@ -109,6 +118,7 @@ button {
     font-size: 1.75rem;
 }
 
+/* styles cursor on hover */
 button:hover{
     cursor: pointer;
 }
@@ -151,13 +161,6 @@ li a:active{
 
 li a:focus{
     text-decoration: underline;
-}
-
-/* styles the form to the left side */
-form{
-    margin: 20px;
-    margin-bottom: 0px;
-    text-align: start;
 }
 
 /* parameters for navigation animation */
@@ -222,7 +225,7 @@ li:hover{
 
 /* styling of table and table properties */
 table{
-    background-color: white;
+    background-color:rgba(143, 102, 136, 0.25);
     margin-right: auto;
     margin-left: auto;
 }
@@ -233,6 +236,7 @@ td{
 }
 
 th{
+    background-color:white;
     border: 2px solid grey;
 }
 

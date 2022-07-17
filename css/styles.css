@@ -1,0 +1,384 @@
+/* applies styles to every element on page, unless over-ridden */
+* {
+    font-family: 'Please write me a song', sans-serif;
+    text-align: center;
+} 
+
+h1 {
+    font-size: 2.75rem;
+    padding-top: 30px;
+    margin-top: 0px;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-top: 10px;
+    margin-top: 0px;
+}
+
+
+h3 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-top: 0px;
+}
+
+h4 {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 0px;
+}
+
+/* styles navigation */
+nav {
+    background-color: rgba(143, 102, 136, 0.25);
+    color: grey;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* styles the wrapper around content */
+.container {
+    max-width: 96%;
+    margin: 0 auto;
+    background-color:rgba(143, 102, 136, 0.10);
+    border-bottom: 1px solid grey;
+    margin-top: 40px;
+}
+
+p, td, tr {
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#banner {
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    
+}
+
+/* sets navigation parameters on parent element */
+.home {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    font-size: 1.75rem;
+    margin-top: 0px;
+    top: -100px;
+    padding: 20px;
+}
+
+/* styles the input fields in form */
+input {
+    display: flex;
+    width: 200px;
+    border: 1px solid grey;
+    height: 30px;
+}
+
+/* styles the labels in form */
+label {
+    font-size: 1.5rem;
+}
+
+#signup {
+    display: inline-block;
+    top: -20px;
+    border-bottom: 1px solid grey;
+    font-size: 1.75rem;
+    font-weight: lighter;
+}
+
+button {
+    padding: 10px 50px 10px 50px;
+    background-color: rgba(143, 102, 136, 0.25);
+    border: 1px solid grey;
+    font-size: 1.75rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+#logo {
+    width: 25%;
+    display: block;
+    position: relative;
+    float: left;
+    left: 0px;
+    margin: 20px;
+}
+
+li a{
+    text-decoration: none;
+    color: grey;
+}
+
+/* LoVe HAte (link, vistited, hover, active) -  correct order for link states */
+li a:link{
+    text-decoration: none;
+}
+
+li a:visited{
+    text-decoration: none;
+}
+
+li a:hover{
+    text-decoration: underline grey;
+}
+
+li a:active{
+    text-decoration: underline grey;
+    color: grey;
+}
+
+li a:focus{
+    text-decoration: underline;
+}
+
+/* styles the form to the left side */
+form{
+    margin: 20px;
+    margin-bottom: 0px;
+    text-align: start;
+}
+
+/* parameters for navigation animation */
+@keyframes letsGrow{
+    0%{
+        transform: scale(2) rotateX(0) translateX(0);
+    }
+    100%{
+        transform: scale(1) rotateX(180deg) translateX(30px);
+    }
+}
+
+/* produces animation on hover for navigation */
+li:hover{
+    /* Shorthand with pre-fixes for: name, duration, fill-mode, iteration-count, direction, timing-function */
+    animation: letsGrow 2.5s forwards 2 alternate linear;
+    -moz-animation: letsGrow 2.5s forwards 2 alternate linear;
+    -webkit-animation: letsGrow 2.5s forwards 2 alternate linear;
+}
+
+/* produces animation on hover for newsletter sign up */
+@keyframes newsLetter{
+    0%{
+        transform: scale(1) rotateX(0) translateX(0);
+    }
+    50%{
+        transform: scale(2) rotateX(0) translateX(15px);
+    }
+    75%{
+        transform: scale(2) rotateX(0) translateX(30px);
+    }
+    100%{
+        transform: scale(1) rotateX(0) translateX(45px);
+    }
+}
+
+/* produces animation on hover state of newsletter sign up which works browser wide*/
+#signup:hover{
+    animation: newsLetter 2.5s forwards infinite normal linear;
+    -moz-animation: newsLetter 2.5s forwards infinite normal linear;
+    -webkit-animation: newsLetter 2.5s forwards infinite normal linear;
+}
+
+/* styles photos on About page to have three rows, and two columns */
+.about-page{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "grid-1 grid-1"
+        "grid-3 grid-4"
+        "grid-5 grid-6";
+}
+
+    #photo-1 { grid-area: grid-1; }
+    #photo-2 { grid-area: grid-2; }
+    #photo-3 { grid-area: grid-3; }
+    #photo-4 { grid-area: grid-4; }
+    #photo-5 { grid-area: grid-5; }
+    #photo-6 { grid-area: grid-6; }
+
+/* styling of table and table properties */
+table{
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+td{
+    padding: 50px;
+    border: 2px solid grey;
+}
+
+th{
+    border: 2px solid grey;
+}
+
+.contact-page {
+    text-align: center;
+
+}
+
+/* centers map on Contact page */
+.map{
+    text-align: center;
+}
+
+/* progressive enhancement (tablet to desktop) */
+@media screen and (min-width: 1024px) {
+  
+/* styles photos on About page to have two rows, and three columns */
+    li a {
+        font-size: 2.5rem;
+    }
+    
+    .about-page{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "grid-1 grid-2 grid-3"
+            "grid-4 grid-5 grid-6";
+    }
+    
+        #photo-1 { grid-area: grid-1; }
+        #photo-2 { grid-area: grid-2; }
+        #photo-3 { grid-area: grid-3; }
+        #photo-4 { grid-area: grid-4; }
+        #photo-5 { grid-area: grid-5; }
+        #photo-6 { grid-area: grid-6; }
+
+}    
+
+/* sizing of photos on About page */
+#photo-1, #photo-2, #photo-3, #photo-4, #photo-5, #photo-6{
+    width: 96%;
+    height: auto;
+}
+
+.contact-page {
+    max-width: 96%;
+    margin: 0 auto;
+}
+
+/* parameters for navigation animation */
+@keyframes letsGrow{
+    0%{
+        transform: scale(0) rotateX(0) translateY(60px);
+    }
+}
+
+/* produces animation on hover for navigation */
+li:hover{
+    /* Shorthand with pre-fixes for: name, duration, fill-mode, iteration-count, direction, timing-function */
+    animation: letsGrow 2.5s forwards 2 alternate linear;
+    -moz-animation: letsGrow 2.5s forwards 2 alternate linear;
+    -webkit-animation: letsGrow 2.5s forwards 2 alternate linear;
+}
+
+/* progressive enhancement (mobile to tablet) */
+@media screen and (max-width: 760px) {
+
+    h1 {
+        font-size: 2rem;
+        padding-top: 30px;
+        margin-top: 0px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        padding-top: 10px;
+        margin-top: 0px;
+    }
+    
+    
+    h3 {
+        font-size: 1.25rem;
+        text-align: center;
+        margin-top: 0px;
+    }
+    
+    h4 {
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 0px;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+    
+  
+    /* styles photos on About page to have two rows, and three columns */
+        .about-page{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            grid-template-areas:
+                "grid-1"
+                "grid-2"
+                "grid-3"
+                "grid-4"
+                "grid-5"
+                "grid-6";
+        }
+        
+            #photo-1 { grid-area: grid-1; }
+            #photo-2 { grid-area: grid-2; }
+            #photo-3 { grid-area: grid-3; }
+            #photo-4 { grid-area: grid-4; }
+            #photo-5 { grid-area: grid-5; }
+            #photo-6 { grid-area: grid-6; }
+    
+    }    
+    
+    /* sizing of photos on About page */
+    #photo-1, #photo-2, #photo-3, #photo-4, #photo-5, #photo-6{
+        width: 96%;
+        height: auto;
+    }
+    
+    .contact-page {
+        max-width: 96%;
+        margin: 0 auto;
+    }
+    
+    /* parameters for navigation animation */
+    @keyframes letsGrow{
+        100%{
+            transform: scale(0) rotateX(0) translateY(90px);
+        }
+    }
+    
+    /* produces animation on hover for navigation */
+    li:hover{
+        /* Shorthand with pre-fixes for: name, duration, fill-mode, iteration-count, direction, timing-function */
+        animation: letsGrow 2.5s forwards 2 alternate linear;
+        -moz-animation: letsGrow 2.5s forwards 2 alternate linear;
+        -webkit-animation: letsGrow 2.5s forwards 2 alternate linear;
+    }
+    
